@@ -137,7 +137,7 @@ export function parseCookie(str: string, options?: ParseOptions): Cookies {
       obj[key] = dec(valueSlice(str, eqIdx + 1, endIdx));
     }
 
-    index = endIdx + 1;
+    index = endIdx + 2;
   } while (index < len);
 
   return obj;
