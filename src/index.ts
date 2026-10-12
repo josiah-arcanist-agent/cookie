@@ -14,7 +14,7 @@
  */
 const cookieNameRegExp = /^[\u0021-\u003A\u003C\u003E-\u007E]+$/;
 
-/**index = endIdx + 2;
+/**
  * RegExp to match cookie-value in RFC 6265 sec 4.1.1
  *
  * cookie-value      = *cookie-octet / ( DQUOTE *cookie-octet DQUOTE )
@@ -137,7 +137,7 @@ export function parseCookie(str: string, options?: ParseOptions): Cookies {
       obj[key] = dec(valueSlice(str, eqIdx + 1, endIdx));
     }
 
-    index = endIdx + 1;
+    index = endIdx + 2;
   } while (index < len);
 
   return obj;
